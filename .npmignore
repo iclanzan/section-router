@@ -1,0 +1,9 @@
+.jshintrc
+.editorconfig
+.tavis.yml
+.git*
+*.md
+tmp
+test
+Gruntfile.js
+.DS_Store

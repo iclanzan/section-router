@@ -1,0 +1,51 @@
+{
+  "name": "section-router",
+  "description": "Section plugin that sets up paths for html files.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/iclanzan/section-router",
+  "author": {
+    "name": "Sorin Iclanzan",
+    "email": "sorin@iclanzan.com",
+    "url": "http://iclanzan.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iclanzan/section-router.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iclanzan/section-router/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/iclanzan/section-router/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.7.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-nodeunit": "~0.2.2",
+    "grunt-section": "~0.1.0",
+    "grunt": "~0.4.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-section": "~0.1.0"
+  },
+  "keywords": [
+    "section",
+    "router",
+    "html",
+    "static",
+    "site",
+    "generator",
+    "blog"
+  ]
+}
