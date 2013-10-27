@@ -32,7 +32,7 @@ grunt.initConfig({
 });
 ```
 
-### contentExtensions
+### `contentExtensions`
 type: `Array`
 default: `[]`
 
