@@ -1,6 +1,7 @@
+.npmignore
 .jshintrc
 .editorconfig
-.tavis.yml
+.travis.yml
 .git*
 *.md
 tmp
