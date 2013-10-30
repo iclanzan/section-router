@@ -1,7 +1,7 @@
 {
   "name": "section-router",
   "description": "Section plugin that sets up paths for html files.",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://github.com/iclanzan/section-router",
   "author": {
     "name": "Sorin Iclanzan",
