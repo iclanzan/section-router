@@ -1,4 +1,12 @@
 language: node_js
 node_js:
-  - 0.8
-  - 0.10
+- 0.8
+- 0.1
+deploy:
+  provider: npm
+  email: sorin@iclanzan.com
+  api_key:
+    secure: UbzvafNn+zRMmqABoMg1rpZifU5gE8Phv/EQKZ8zUBJ+KnSZY8LW/FuN2YYhggD+XlvOtTLBYEcjsA7oKdT/3KAFuReNBBN50tLVVVKvTn/PD0ywuRmfjO0eKfXlLA4CoykvkXCBZ08uXLT+UDD7XngZYf5wX/tu7rHqD/R2/JI=
+  on:
+    repo: iclanzan/section-router
+    branch: master
