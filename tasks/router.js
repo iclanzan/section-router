@@ -128,4 +128,10 @@ module.exports = function (grunt) {
   evt.on(['section', 'tree'], function recurse(root) {
     root.children.sort(comparator).forEach(recurse);
   });
+
+  evt.on(['section', 'tree'], function (root) {
+    console.log(root.pages.map(function (c) { return c.name || 'U'; }));
+    root.pages.sort(comparator);
+    console.log(root.pages.map(function (c) { return c.name || 'U'; }));
+  });
 };

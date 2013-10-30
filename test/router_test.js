@@ -47,7 +47,7 @@ exports.section = {
   },
 
   'Order': function (test) {
-    test.expect(7);
+    test.expect(8);
 
     var order = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth'];
 
@@ -58,6 +58,10 @@ exports.section = {
     orderPage.children.forEach(function (child, index) {
       test.equal(child.name, order[index], 'Expected "' + child.name + '" to be the ' + order[index] + ' file.');
     });
+
+    var pagesOrder = root.pages.map(function (c) { return c.name; }).join(', ');
+    var expectedOrder = 'with-index, dir, first, second, third, my-article, date, fourth, , about, fifth, order, sixth, subdir, yadda';
+    test.equal(pagesOrder, expectedOrder, 'Expected a different ordering of pages.');
 
     test.done();
   },
