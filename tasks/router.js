@@ -99,12 +99,16 @@ module.exports = function (grunt) {
 
     if (aHasIndex) {
       if (bHasIndex) {
-        return a.index - b.index;
+        if (a.index != b.index) {
+          return a.index - b.index;
+        }
       }
-      return -1;
+      else {
+        return -1;
+      }
     }
 
-    if (bHasIndex) {
+    else if (bHasIndex) {
       return 1;
     }
 
@@ -113,15 +117,19 @@ module.exports = function (grunt) {
 
     if (aHasTimestamp) {
       if (bHasTimestamp) {
-        return b.timestamp - a.timestamp;
+        if (a.timestamp != b.timestamp) {
+          return b.timestamp - a.timestamp;
+        }
       }
-      return -1;
+      else {
+        return -1;
+      }
     }
 
-    if (bHasTimestamp) {
+    else if (bHasTimestamp) {
       return 1;
     }
-
+    
     return a.name > b.name ? 1 : -1;
   }
 
@@ -130,8 +138,6 @@ module.exports = function (grunt) {
   });
 
   evt.on(['section', 'tree'], function (root) {
-    console.log(root.pages.map(function (c) { return c.name || 'U'; }));
     root.pages.sort(comparator);
-    console.log(root.pages.map(function (c) { return c.name || 'U'; }));
   });
 };
